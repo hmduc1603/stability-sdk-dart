@@ -29,8 +29,10 @@ class RequestBuilder {
     return this;
   }
 
-  RequestBuilder setEngineType(String engineType) {
-    this.engineType = engineType;
+  RequestBuilder setEngineType(String? engineType) {
+    if (engineType != null) {
+      this.engineType = engineType;
+    }
     return this;
   }
 
