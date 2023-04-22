@@ -10,7 +10,7 @@ class RequestBuilder {
   int height = Config.height;
   int width = Config.width;
   int samples = Config.samples;
-  EngineType engineType = EngineType.inpainting_v2_0;
+  String engineType = EngineType.inpainting_v2_0;
 
   RequestBuilder(this.prompt);
 
@@ -29,7 +29,7 @@ class RequestBuilder {
     return this;
   }
 
-  RequestBuilder setEngineType(EngineType engineType) {
+  RequestBuilder setEngineType(String engineType) {
     this.engineType = engineType;
     return this;
   }
@@ -47,7 +47,7 @@ class RequestBuilder {
           text: prompt,
         ),
       ],
-      engineId: engineType.id,
+      engineId: engineType,
     );
     return request;
   }
