@@ -10,7 +10,7 @@ class RequestBuilder {
   int height = Config.height;
   int width = Config.width;
   int samples = Config.samples;
-  String engineType = EngineType.inpainting_v2_0;
+  String engineType = DefaultEngineType.inpainting_v2_0;
 
   RequestBuilder(this.prompt);
 

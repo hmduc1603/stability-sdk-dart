@@ -2,7 +2,7 @@
 
 import 'dart:core';
 
-class EngineType {
+class DefaultEngineType {
   static const diffusion_768_v2_1 = 'stable-diffusion-768-v2-1';
   static const inpainting_v2_0 = 'stable-inpainting-512-v2-0';
 }
