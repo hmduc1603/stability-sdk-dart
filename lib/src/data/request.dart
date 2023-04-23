@@ -30,8 +30,10 @@ class RequestBuilder {
     return this;
   }
 
-  RequestBuilder setUpSteps(int steps) {
-    this.steps = steps;
+  RequestBuilder setUpSteps(int? steps) {
+    if (steps != null) {
+      this.steps = steps;
+    }
     return this;
   }
 
