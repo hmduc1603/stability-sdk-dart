@@ -4,4 +4,5 @@ class Config {
   static const width = 512;
   static const samples = 1;
   static const cfgScale = 0.7;
+  static const steps = 30;
 }

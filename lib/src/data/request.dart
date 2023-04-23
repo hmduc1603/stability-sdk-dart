@@ -10,6 +10,7 @@ class RequestBuilder {
   int height = Config.height;
   int width = Config.width;
   int samples = Config.samples;
+  int steps = Config.steps;
   String engineType = DefaultEngineType.inpainting_v2_0;
 
   RequestBuilder(this.prompt);
@@ -29,6 +30,11 @@ class RequestBuilder {
     return this;
   }
 
+  RequestBuilder setUpSteps(int steps) {
+    this.steps = steps;
+    return this;
+  }
+
   RequestBuilder setEngineType(String? engineType) {
     if (engineType != null) {
       this.engineType = engineType;
@@ -41,6 +47,7 @@ class RequestBuilder {
       height: $fixnum.Int64(height),
       width: $fixnum.Int64(width),
       samples: $fixnum.Int64(samples),
+      steps: $fixnum.Int64(samples),
     );
     final request = pb.Request(
       image: image,
